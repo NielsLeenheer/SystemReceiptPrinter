@@ -1,0 +1,44 @@
+{
+  "name": "system-receipt-printer",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "import": "./dist/network-receipt-printer.mjs",
+    "require": "./dist/network-receipt-printer.cjs"
+  },
+  "module": "dist/network-receipt-printer.mjs",
+  "main": "dist/network-receipt-printer.cjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NielsLeenheer/SystemReceiptPrinter.git"
+  },
+  "keywords": [
+    "receipt",
+    "printerdriver",
+    "printer",
+    "escpos",
+    "star",
+    "epson"
+  ],
+  "author": "Niels Leenheer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NielsLeenheer/NetworkReceiptPrinter/issues"
+  },
+  "homepage": "https://github.com/NielsLeenheer/NetworkReceiptPrinter#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "rollup": "^3.20.7"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@grandchef/node-printer": "^0.8.0",
+    "@mapbox/node-pre-gyp": "^1.0.11"
+  }
+}
