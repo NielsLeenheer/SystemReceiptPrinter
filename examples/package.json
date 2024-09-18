@@ -1,0 +1,8 @@
+{
+    "name": "examples",
+    "version": "0.0.0",
+    "type": "module",
+    "devDependencies": {
+        "@point-of-sale/thermal-printer-encoder": "^3.0.0"
+    }
+}

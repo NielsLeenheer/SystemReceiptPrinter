@@ -1,12 +1,12 @@
 import SystemReceiptPrinter from "../src/main.js";
-import ThermalPrinterEncoder from "../../ThermalPrinterEncoder/dist/thermal-printer-encoder.mjs";
+import ReceiptPrinterEncoder from "@point-of-sale/receipt-printer-encoder";
 
 
 const printer = new SystemReceiptPrinter({
     name: 'Star_TSP143__STR_T_001__2',
 });
 
-const encoder = new ThermalPrinterEncoder({
+const encoder = new ReceiptPrinterEncoder({
     language: 'star-prnt',
 });
 
