@@ -1,9 +1,9 @@
 import printer from '@grandchef/node-printer';
 import EventEmitter from './event-emitter.js';
 
-class ReceiptPrinter {}
+class ReceiptPrinterDriver {}
 
-class SystemReceiptPrinter extends ReceiptPrinter {
+class SystemReceiptPrinter extends ReceiptPrinterDriver {
 
 	#emitter;
 	

@@ -22,9 +22,9 @@ class EventEmitter {
     }        
 }
 
-class ReceiptPrinter {}
+class ReceiptPrinterDriver {}
 
-class SystemReceiptPrinter extends ReceiptPrinter {
+class SystemReceiptPrinter extends ReceiptPrinterDriver {
 
 	#emitter;
 	
