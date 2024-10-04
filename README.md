@@ -2,15 +2,29 @@
 
 This is an library that allows you to print to a receipt printer using the system printer driver.
 
+<br>
+
+[![npm](https://img.shields.io/npm/v/@point-of-sale/system-receipt-printer)](https://www.npmjs.com/@point-of-sale/system-receipt-printer)
+![GitHub License](https://img.shields.io/github/license/NielsLeenheer/SystemReceiptPrinter)
+
+
+> This library is part of [@point-of-sale](https://point-of-sale.dev), a collection of libraries for interfacing browsers and Node with Point of Sale devices such as receipt printers, barcode scanners and customer facing displays.
+
+<br>
+
 ## What does this library do?
 
 In order to print a receipt on a receipt printer you need to build the receipt and encode it as in the ESC/POS or StarPRNT language. You can use the [`ReceiptPrinterEncoder`](https://github.com/NielsLeenheer/ReceiptPrinterEncoder) library for this. You end up with an array of raw bytes that needs to be send to the printer. One way to do that is using the system printer driver.
+
+<br>
 
 ## Installation
 
 If you want to use this libary, first install the package using npm:
 
-    npm install @point-of-sale/system-receipt-printer --save
+```
+npm install @point-of-sale/system-receipt-printer --save
+```
 
 In your project you can then import it, if you use ES6 modules:
 
@@ -28,6 +42,8 @@ let SystemReceiptPrinter = require('@point-of-sale/system-receipt-printer');
 let receiptPrinter = new SystemReceiptPrinter();
 ```
 
+<br>
+
 ## Configuration
 
 When you create the `SystemReceiptPrinter` object you can specify a number of options to help with the library with connecting to the device. 
@@ -36,7 +52,10 @@ When you create the `SystemReceiptPrinter` object you can specify a number of op
 
 When a printer is connected to your system, it will get assigned a unique name. Provide that name when you instantiate the `SystemReceiptPrinter` object:
 
-- `name`: The name of the printer.
+- `name`<br>
+    The name of the printer.
+
+<br>
 
 For example, to print on the printer `Star_TSP143__STR_T_001_`:
 
@@ -45,6 +64,8 @@ const receiptPrinter = new SystemReceiptPrinter({
     name:   'Star_TSP143__STR_T_001_'
 });
 ```
+
+<br>
 
 ## Connect to a receipt printer
 
@@ -61,6 +82,7 @@ The callback of the `connected` event is passed an object with the following pro
 -   `type`<br>
     Type of the connection that is used, in this case it is always `system`.
 
+<br>
 
 ## Commands
 
@@ -91,7 +113,6 @@ let data = encoder
 
 receiptPrinter.print(data);
 ```
-
 
 ### Disconnect from the printer 
 
@@ -129,6 +150,12 @@ let printers = SystemReceiptPrinter.getPrinters();
 ]
 ```
 
-## License
+<br>
 
-MIT
+-----
+
+<br>
+
+This library has been created by Niels Leenheer under the [MIT license](LICENSE). Feel free to use it in your products. The  development of this library is sponsored by Salonhub.
+
+<a href="https://salohub.nl"><img src="https://salonhub.nl/assets/images/salonhub.svg" width=140></a>
