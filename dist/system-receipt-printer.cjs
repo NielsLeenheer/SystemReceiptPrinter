@@ -36,7 +36,7 @@ class SystemReceiptPrinter extends ReceiptPrinterDriver {
 		this.#emitter = new EventEmitter();
 
         this.#options = {
-			name:		options.name || '',
+			name:		options?.name || '',
         };
 	}
 
